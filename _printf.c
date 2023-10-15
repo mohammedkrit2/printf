@@ -1,9 +1,4 @@
 #include "main.h"
-/**
-int _putchar(char c)
-{
-        return (write(1, &c, 1));
-}
 
 
 int handle_string(char *str)
@@ -13,17 +8,16 @@ int handle_string(char *str)
         if (str == NULL)
         {
                 handle_string("(null)");
-                return (0);
+                return (1);
         }
         while (str[i])
         {
-                putchar(str[i]);
+                _putchar(str[i]);
                 i++;
         }
         return (i);
 }
 
-**/
 int _printf(const char *format, ...)
 {
 	int count = 0;
@@ -37,7 +31,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			format++;
+                        format++;
 			if (*format == 'c')
 			{
 				char c = va_arg(args, int);

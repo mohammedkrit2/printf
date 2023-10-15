@@ -1,7 +1,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
-
+#include "main.h"
+/**
 int _putchar(char c)
 {
         return (write(1, &c, 1));
@@ -25,7 +26,7 @@ int handle_string(char *str)
         return (i);
 }
 
-
+*/
 
 int _printf(const char *format, ...)
 {
@@ -76,4 +77,8 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (count);
+}
+int main()
+{
+	_printf("%s %r %c %% %",world, '\n');
 }

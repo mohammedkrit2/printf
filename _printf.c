@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - our own printf
+ * handle_string - function that complet _printf
+ *
+ * Return: count
+ */
 
 int handle_string(char *str)
 {
@@ -26,12 +32,14 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	if (!format || !format[0])
+	{
 		return (-1);
+	}
 	while (*format)
 	{
 		if (*format == '%')
 		{
-                        format++;
+			format++;
 			if (*format == 'c')
 			{
 				char c = va_arg(args, int);

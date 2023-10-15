@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "main.h"
 
 int handle_string(char *str)
 {
@@ -9,7 +10,7 @@ int handle_string(char *str)
 	if (str == NULL)
 	{
 		handle_string("(null)");
-		return;
+		return (0);
 	}
 	while (str[i])
 	{

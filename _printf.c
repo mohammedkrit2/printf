@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == 'c')
 			{
-				char c va_arg(args, int);
+				char c = va_arg(args, int);
 				count += _putchar(c);
 			}
 			else if (*format == 's')
@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				_putchar(*format);
+				_putchar('%');
 				count++;
 				if (*format)
 				{
@@ -75,8 +75,4 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (count);
-}
-int main()
-{
-	_printf("%s %r %c %% %",world, '\n');
 }

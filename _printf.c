@@ -76,7 +76,3 @@ int _printf(const char *format, ...)
 	}
 	return (count);
 }
-int main()
-{
-        _printf("%s %r %c %% %",world, '\n');
-}

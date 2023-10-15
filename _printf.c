@@ -1,7 +1,31 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "main.h"
+
+int _putchar(char c)
+{
+        return (write(1, &c, 1));
+}
+
+
+int handle_string(char *str)
+{
+        int i = 0;
+
+        if (str == NULL)
+        {
+                handle_string("(null)");
+                return;
+        }
+        while (str[i])
+        {
+                putchar(str[i]);
+                i++;
+        }
+        return (i);
+}
+
+
 
 int _printf(const char *format, ...)
 {

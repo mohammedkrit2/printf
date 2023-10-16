@@ -4,6 +4,7 @@
  * _printf - our own printf
  * handle_string - function
  * that complet _printf
+ * str: string
  * Return: count
  */
 

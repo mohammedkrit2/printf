@@ -9,5 +9,7 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int handle_string(char *str);
+int nbr_digits(int n);
+void print_nbr(int nbr);
 
 #endif
